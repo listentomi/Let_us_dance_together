@@ -1,0 +1,7 @@
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_1
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_2
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_3
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_4
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_6
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_7
+../../../Music-to-Dance-Motion-Synthesis/DANCE_T_8
