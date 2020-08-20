@@ -52,9 +52,17 @@ for **v1,v2,v3,v4**, you can run the following `.py` files for testing
 
 `./v4/test.py`
 
-we provide `generate_dance_from_music.py` in `./v3` for you to generate a video that contains music and dance. 
+## Visualization
 
-You can use the tools I uploaded https://github.com/oneThousand1000/bvh_visualization to visualize the results, those tool can visualize .bvh files.  we will updata the project soon afterwards :)
+we provide `generate_dance_from_music.py` in `./v3` for you to generate a video that contains music and dance, for more vivid results, you can also get the  `.bvh` file.
+
+
+
+**You can use the applications in https://github.com/oneThousand1000/3DPointsMotionVisualization to visualize `.bvh` files:**
+
+Use the application in `./liveAnimation/LiveAnimation_110/LiveAnimation` (**Notice: you need to install `./liveAnimation/xnafx40_redist.msi` firstly**), load the `.pmx`  model in `./model`, then import the `.bvh` file mentioned aboved, finally, enjoy the dance~ :)
+
+![img](/images/1.png)
 
 ## TODO
 
