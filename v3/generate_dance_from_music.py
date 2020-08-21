@@ -7,7 +7,7 @@ import os
 from data_prepare.visualize import  draw_predict
 from visualization.threeDPoints2Bvh import smartbody_skeleton
 def getStandardFrames(frames):
-    new_frames = np.zeros([len(frames), 19, 3])
+    new_frames = np.zeros([len(frames), 21, 3])
     for i in range(len(frames)):
         # Hips
         new_frames[i][0][0] = frames[i][2][0] * -1
@@ -100,6 +100,16 @@ def getStandardFrames(frames):
         new_frames[i][18][0] = frames[i][15][0] * -1
         new_frames[i][18][1] = frames[i][15][1]
         new_frames[i][18][2] = frames[i][15][2]
+
+        # LeftToe
+        new_frames[i][19][0] = (frames[i][11][0] + frames[i][10][0]) / 2 * -1
+        new_frames[i][19][1] = (frames[i][11][1] + frames[i][10][1]) / 2
+        new_frames[i][19][2] = (frames[i][11][2] + frames[i][10][2]) / 2
+
+        # RightToe
+        new_frames[i][20][0] = (frames[i][20][0] + frames[i][19][0]) / 2 * -1
+        new_frames[i][20][1] = (frames[i][20][1] + frames[i][19][1]) / 2
+        new_frames[i][20][2] = (frames[i][20][2] + frames[i][19][2]) / 2
     return new_frames
 hop_length = 512
 window_length = hop_length * 2
