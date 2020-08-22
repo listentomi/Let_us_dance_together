@@ -58,7 +58,7 @@ def draw(frames):
     pass
 
 if __name__ == '__main__':
-    with open('./result/DANCE_W_31.json','r') as fin:
+    with open('./interpolation_result/DANCE_R_10.json','r') as fin:
         data = json.load(fin)
 fps = 25
 # fourcc = cv2.VideoWriter_fourcc(*'XVID')

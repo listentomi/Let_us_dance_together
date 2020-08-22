@@ -110,6 +110,8 @@ class MusicVae:
             # decoding
             y = self.music_decoder(z, n_hidden, self.acoustic_dim)
             y = tf.clip_by_value(y, 1e-8, 1 - 1e-8)
+            # smoothness loss
+            loss_smo = tf.losses.mean_squared_error(y[1:], y[:-1])
 
             marginal_likelihood = tf.losses.mean_squared_error(target, y)
             KL_divergence = 0.5 * tf.reduce_sum(tf.square(mu) + tf.square(sigma) - tf.log(1e-8 + tf.square(sigma)) - 1, 1)
@@ -119,7 +121,7 @@ class MusicVae:
 
             ELBO = marginal_likelihood - KL_divergence
 
-            loss = marginal_likelihood
+            loss = marginal_likelihood+loss_smo
 
             return y, z, loss, marginal_likelihood, KL_divergence
 

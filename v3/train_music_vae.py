@@ -6,8 +6,8 @@ if __name__=="__main__":
         for line in f.readlines():
             train_dirs.append(line[:-1])
 
-    Model = MusicVae(model_save_dir='./good_result/W/music_vae_model',
-                 log_dir='./good_result/W/music_log',
+    Model = MusicVae(model_save_dir='./good_result/R/music_vae_model',
+                 log_dir='./good_result/R/music_log',
                  train_file_list=train_dirs)
     Model.init_dataset()
-    Model.train(resume=True)
+    Model.train(resume=False)

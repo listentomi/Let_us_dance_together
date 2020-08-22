@@ -129,6 +129,7 @@ class SmartBodySkeleton(object):
                     axis=1
                 )
 
+
         bone_len = {}
         for joint in self.keypoint2index:
             if 'Left' in joint or 'Right' in joint:

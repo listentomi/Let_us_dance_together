@@ -6,14 +6,14 @@ if __name__ == '__main__':
         for line in f.readlines():
             train_dirs.append(line[:-1])
     test_dirs=[
-        "../../../Music-to-Dance-Motion-Synthesis/DANCE_W_31"
+        "../../../Music-to-Dance-Motion-Synthesis/DANCE_R_10"
     ]
     Model = VAE_LSTM_FIX_model(
         train_file_list=train_dirs,
-        model_save_dir='./good_result/W/model',
-        log_dir='./good_result/W/train_nn_log',
-        motion_vae_ckpt_dir='./good_result/W/motion_vae_model/stock2.model-349',
-        music_vae_ckpt_dir='./good_result/W/music_vae_model/stock2.model-269',
+        model_save_dir='./good_result/R/model',
+        log_dir='./good_result/R/train_nn_log',
+        motion_vae_ckpt_dir='./good_result/R/motion_vae_model/stock2.model-119',
+        music_vae_ckpt_dir='./good_result/R/music_vae_model/stock2.model-299',
         rnn_unit_size=32,
         acoustic_dim=16,
         temporal_dim=3,

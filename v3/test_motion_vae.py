@@ -6,10 +6,10 @@ if __name__=="__main__":
         for line in f.readlines():
             train_dirs.append(line[:-1])
     test_dirs = [
-        "../../../Music-to-Dance-Motion-Synthesis/DANCE_W_31"
+        "../../../Music-to-Dance-Motion-Synthesis/DANCE_R_10"
     ]
-    Model = MotionVae(model_save_dir='./good_result/W/motion_vae_model',
-                 log_dir='./good_result/W/motion_log',
+    Model = MotionVae(model_save_dir='./good_result/R/motion_vae_model',
+                 log_dir='./good_result/R/motion_log',
                  train_file_list=train_dirs)
     Model.init_dataset()
     for test_file in test_dirs:
